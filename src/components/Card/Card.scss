@@ -1,0 +1,211 @@
+// @import "../../styles/variables.scss";
+
+$cardWidth: 230px;
+$cardHeight: 360px;
+$borderRadius: 16px;
+$cardMargin: 80px;
+$colorShadow: black;
+$colorShadowContrast: white;
+
+$hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+$returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+.card-wrap {
+  margin-bottom: $cardMargin;
+  width: $cardWidth;
+  height: $cardHeight;
+  cursor: pointer;
+  perspective: 1000px;
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: transform 1.2s;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+  }
+
+  &:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    border-radius: $borderRadius;
+    overflow: hidden;
+    box-shadow: rgba($colorShadow, 0.66) 0 30px 60px 0;
+    -webkit-transition: 1s $returnEasing;
+    transition: 1s $returnEasing;
+    -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    visibility: visible;
+    backface-visibility: hidden;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
+
+  .picture {
+    border-radius: $borderRadius;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    -webkit-transition: 0.5s $returnEasing, opacity 2s $returnEasing;
+    transition: 0.5s $returnEasing, opacity 2s $returnEasing;
+    pointer-events: none;
+  }
+
+  .card-info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+
+    h2 {
+      text-shadow: rgba($colorShadow, 0.5) 0 10px 10px;
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      opacity: 0.9;
+      color: $fontColor;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: capitalize;
+      font-style: italic;
+      text-shadow: rgba($colorShadow, 1) 0 2px 3px;
+    }
+  }
+
+  .icons-container,
+  .hobbies-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-content: flex-end;
+    padding-top: 5px;
+    align-items: flex-start;
+
+    img,
+    svg {
+      max-width: 45px;
+      height: auto;
+      -webkit-filter: drop-shadow(0 10px 10px $colorShadow);
+      filter: drop-shadow(0 10px 10px $colorShadow);
+    }
+
+    svg {
+      fill: $fontColor;
+      max-width: 90px;
+      height: 60px;
+      margin-bottom: 10px;
+      &:not(:last-child) {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    .card-front,
+    .card-back {
+      -webkit-transition: 0.6s $hoverEasing, box-shadow 3s $hoverEasing;
+      transition: 0.6s $hoverEasing, box-shadow 3s $hoverEasing;
+      box-shadow: rgba($colorShadowContrast, 0.2) 0 0 40px 5px,
+        rgba($colorShadowContrast, 1) 0 0 0 1px,
+        rgba($colorShadow, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+        inset $colorShadowContrast 0 0 0 6px;
+    }
+
+    .picture {
+      -webkit-transition: 0.6s $hoverEasing, opacity 5s $hoverEasing;
+      transition: 0.6s $hoverEasing, opacity 5s $hoverEasing;
+      opacity: 0.5;
+    }
+  }
+}
+
+$breakpoint-small-screen: 890px;
+@media (max-width: $breakpoint-small-screen) {
+  .cards-container {
+    column-gap: 30px;
+
+    .card-wrap {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+$breakpoint-mobile-big: 580px;
+@media (max-width: $breakpoint-mobile-big) {
+  .card-wrap {
+    height: $cardWidth;
+    width: $cardHeight;
+
+    .picture {
+      object-fit: cover;
+      object-position: 0% 20%;
+    }
+
+    .card-info {
+      height: 50%;
+    }
+  }
+}
+
+$breakpoint-mobile-medium: 427px;
+@media (max-width: $breakpoint-mobile-medium) {
+  .cards-container {
+    .card-wrap {
+      width: 99%;
+      margin-bottom: 10px;
+
+      .card-front,
+      .card-back,
+      .picture {
+        border-radius: 0px;
+      }
+
+      .card-info {
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .card-text {
+          align-self: flex-end;
+        }
+
+        .icons-container {
+          flex-direction: column;
+        }
+
+        .hobbies-container {
+          width: 100%;
+        }
+      }
+    }
+
+    &:hover {
+      .card-front,
+      .card-back {
+        box-shadow: rgba($colorShadowContrast, 0.2) 0 0 40px 5px,
+          rgba($colorShadow, 0.66) 0 30px 60px 0;
+      }
+    }
+  }
+}
