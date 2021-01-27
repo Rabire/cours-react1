@@ -1,52 +1,32 @@
 [
   {
-    "name": "Jérémy Lempereur",
-    "job": "ingénieur logiciel",
+    "name": "Parions sport",
+    "job": "30€ offert",
     "technologies": ["rust"],
-    "hobbies": ["Hockey", "Simracing", "Rust"],
     "picture": "jeremy"
   },
-
   {
-    "name": "Cédric Bonaudo",
-    "job": "ingénieur logiciel",
+    "name": "SuperCaz",
+    "job": "300€ dès 100€ de paris",
     "technologies": ["vue", "react", "rust"],
-    "hobbies": ["MultiInstruments", "MusicComposition", "VideoGames"],
     "picture": "cedric"
   },
   {
-    "name": "Yann Bonaudo",
-    "job": "ingénieur logiciel",
-    "hobbies": ["ListenMusic", "Cooking", "VideoGames"],
+    "name": "FDJ",
+    "job": "4 jeux offerts",
     "picture": "yann",
     "technologies": ["react", "reactNative", "node"]
   },
   {
-    "name": "Rabire Hakim",
-    "job": "ingénieur logiciel",
-    "hobbies": ["Series", "Boxing", "Weight"],
+    "name": "Auchan",
+    "job": "courses offertes",
     "picture": "rabire",
     "technologies": ["react", "reactNative", "node"]
   },
   {
-    "name": "Léo di martino",
-    "job": "ingénieur logiciel",
+    "name": "Neflux",
+    "job": "5 premiers mois gratuits",
     "technologies": ["react", "reactNative", "node"],
-    "hobbies": ["Volley", "ListenMusic", "VideoGames"],
     "picture": "leo"
-  },
-  {
-    "name": "Benoit chassignol",
-    "job": "ingénieur logiciel",
-    "technologies": ["js", "rust", "wasm"],
-    "hobbies": ["VTT", "ListenMusic", "OSS"],
-    "picture": "benoit"
-  },
-  {
-    "name": "morgane gaillard",
-    "job": "infographiste / intégratrice web",
-    "technologies": ["xd", "ai", "react"],
-    "hobbies": ["Roller", "Cooking", "VideoGames"],
-    "picture": "morgane"
   }
 ]
