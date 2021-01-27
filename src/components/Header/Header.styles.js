@@ -8,8 +8,6 @@ export const Navbar = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: ${color.darkBlue};
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 2;
 `;
