@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+    mysql-development:
+        image: mysql:8.0.17
+        environment:
+            MYSQL_ROOT_PASSWORD: 10m3NTum
+            MYSQL_DATABASE: auth-boilerplate
+        ports:
+            - "3306:3306"
+# docker-compose down
+# docker-compose up
+# https://medium.com/better-programming/setting-up-mysql-database-in-a-docker-d6c69a3e9afe
+# docker-compose exec  mysql-development mysql -uroot -phelloworld testapp

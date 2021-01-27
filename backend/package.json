@@ -1,0 +1,43 @@
+{
+    "name": "back-node-model",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha './src/test/appTest.js'",
+        "start": "./node_modules/.bin/nodemon ./src/index.js",
+        "migrate": "npx sequelize db:migrate",
+        "migrate:undo": "npx sequelize db:migrate:undo",
+        "seed": "npx sequelize db:seed:all",
+        "seed:undo": "npx sequelize db:seed:undo:all"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iomentum/backend-node.git"
+    },
+    "author": "Rayann",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/iomentum/backend-node/issues"
+    },
+    "homepage": "https://github.com/iomentum/backend-node#readme",
+    "dependencies": {
+        "bcrypt": "^5.0.0",
+        "body-parser": "^1.19.0",
+        "chai-http": "^4.3.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mysql2": "^2.1.0",
+        "sequelize": "^5.21.13",
+        "sequelize-cli": "^5.5.1"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "mocha": "^8.0.1",
+        "nodemon": "^2.0.4"
+    }
+}

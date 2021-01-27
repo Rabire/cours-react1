@@ -12,3 +12,4 @@ export const CardBox = styled.div`
   display: flex;
   margin: 80px 10px 10px 10px;
 `;
+//mongodb+srv://tpReact:<password>@cluster-tp.pd8yi.mongodb.net/<dbname>?retryWrites=true&w=majority
