@@ -5,7 +5,7 @@ export const CardListContainer = styled.div`
   display: flex;
   flex-direction: row;
   background-color: red;
-  width: 50%;
+  flex-wrap: wrap;
 `;
 export const CardBox = styled.div`
   display: flex;
