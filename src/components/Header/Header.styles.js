@@ -7,7 +7,7 @@ export const Navbar = styled.div`
   padding: 10px 0;
   justify-content: space-around;
   align-items: center;
-  background-color: ${color.darkBlue};
+  background-color: ${color.grey};
   position: fixed;
   top: 0;
   width: 100%;

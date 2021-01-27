@@ -7,7 +7,10 @@ export const Card = ({
 }) => {
   const icons = technologies.map((technology, i) => (
     <img
-      src={require(`../../assets/icons/${technology}-icon.png`)}
+      src={
+        "https://www.journaldugeek.com/content/uploads/2019/06/supermariorunta.jpg"
+      }
+      // require(`../../assets/icons/${technology}-icon.png`)
       alt={`${technology} logo`}
       key={`${technology}${i}`}
     />
@@ -25,7 +28,7 @@ export const Card = ({
           {picture && (
             <img
               className="picture"
-              src={require(`../../assets/photos/${picture}.jpg`)}
+              src={`https://static.fnac-static.com/multimedia/Images/FD/Comete/135542/CCP_IMG_ORIGINAL/1777607.jpg`}
               alt={name}
             />
           )}
@@ -41,7 +44,7 @@ export const Card = ({
           {picture && (
             <img
               className="picture"
-              src={require(`../../assets/photos/${picture}.jpg`)}
+              src={`https://xh5b7ws4.tinifycdn.com/upload/250x333/jack-sparrow-250.jpg`}
               alt={name}
             />
           )}
