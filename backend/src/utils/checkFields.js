@@ -1,12 +1,14 @@
 exports.isPostBodyMissingField = (obj) => {
-    if (
-        obj.email == false ||
-        obj.password == false ||
-        obj.email == null ||
-        obj.password == null
-    ) {
-        return true;
-    } else {
-        return false;
-    }
+  if (
+    obj.email == false ||
+    obj.firstname == false ||
+    obj.lastname == false ||
+    obj.lastname == null ||
+    obj.email == null ||
+    obj.firstname == null
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 };

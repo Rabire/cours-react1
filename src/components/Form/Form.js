@@ -9,12 +9,24 @@ import {
   Button,
 } from "./Form.style";
 
+import { createUser } from "../../utils/rest";
+
 export const Form = () => {
   const [lastName, setLastName] = useState(null);
   const [firstName, setFirstName] = useState(null);
   const [email, setEmail] = useState(null);
 
-  console.log(lastName, firstName, email);
+  function addUser(newUser) {
+    createUser(newUser)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("Oé", err);
+      });
+  }
+
+  const userObject = { firstname: firstName, lastname: lastName, email: email };
 
   return (
     <FormContainer>
@@ -40,7 +52,11 @@ export const Form = () => {
             onChange={(event) => setEmail(event.target.value)}
           />
         </InputDiv>
-        <Button type="button" value="Envoyer" />
+        <Button
+          type="button"
+          value="Envoyer"
+          onClick={() => addUser(userObject)}
+        />
       </StyledForm>
     </FormContainer>
   );
