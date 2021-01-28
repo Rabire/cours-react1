@@ -8,29 +8,22 @@ import {
   FormContainer,
   Button,
 } from "./LoginForm.style";
-
-// import { createUser } from "../../utils/rest";
+import axios from "axios";
 
 export const LoginForm = () => {
   const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
 
-  //   function addUser(newUser) {
-  //     createUser(newUser)
-  //       .then((res) => {
-  //         console.log(res);
-  //       })
-  //       .catch((err) => {
-  //         console.log("Oé", err);
-  //       });
-  //   }
-
   const login = () => {
-    console.log("make API call");
-    console.log({ userObject });
+    axios
+      .post("http://localhost:3000/users/login", credentials)
+      .then(() => {
+        console.log("success");
+      })
+      .catch(console.log);
   };
 
-  const userObject = { email, password };
+  const credentials = { email, password };
 
   return (
     <FormContainer>
@@ -46,16 +39,12 @@ export const LoginForm = () => {
         <InputDiv>
           <Text>Password :</Text>
           <Input
-            type="text"
+            type="password"
             onChange={(event) => setPassword(event.target.value)}
           />
         </InputDiv>
 
-        <Button
-          type="button"
-          value="Envoyer"
-          onClick={() => login(userObject)}
-        />
+        <Button type="button" value="Se connecter" onClick={login} />
       </StyledForm>
     </FormContainer>
   );
