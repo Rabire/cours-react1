@@ -1,32 +1,27 @@
 [
   {
     "name": "Parions sport",
-    "job": "30€ offert",
-    "technologies": ["rust"],
-    "picture": "jeremy"
+    "frontDescription": "30€ offert",
+    "picture": "https://lh3.googleusercontent.com/proxy/si7tE0FgvyQBt7hjnEI2JkfIOyp683uJQarIVPjkOu7UMIfavgACAlfm_62TcY2N3W108DpGb1l_Zji8nR2EeTA25WmWwXha6hpgbxONCiQ0_YHFAhZl6o3NhE5fzVHF5pjM7xc"
   },
   {
-    "name": "SuperCaz",
-    "job": "300€ dès 100€ de paris",
-    "technologies": ["vue", "react", "rust"],
-    "picture": "cedric"
+    "name": "WinOUI",
+    "frontDescription": "300€ dès 100€ de paris",
+    "picture": "https://livegeek.fr/wp-content/uploads/2019/11/avis-casino-winoui-1.png"
   },
   {
     "name": "FDJ",
-    "job": "4 jeux offerts",
-    "picture": "yann",
-    "technologies": ["react", "reactNative", "node"]
+    "frontDescription": "4 jeux offerts",
+    "picture": "https://www.groupefdj.com/uploads/images/content/Communiqu%C3%A9s%20de%20presse/Corporate/header_mobile_fdj_sobre.optim.png?v=1.0.13"
   },
   {
     "name": "Auchan",
-    "job": "courses offertes",
-    "picture": "rabire",
-    "technologies": ["react", "reactNative", "node"]
+    "frontDescription": "courses offertes",
+    "picture": "https://federation-tbs.com/wp-content/uploads/2018/05/5a1d324c4ac6b00ff574e2bf.png"
   },
   {
     "name": "Neflux",
-    "job": "5 premiers mois gratuits",
-    "technologies": ["react", "reactNative", "node"],
-    "picture": "leo"
+    "frontDescription": "5 premiers mois gratuits",
+    "picture": "https://variety.com/wp-content/uploads/2020/05/netflix-logo.png"
   }
 ]
