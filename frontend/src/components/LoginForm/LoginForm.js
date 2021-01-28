@@ -12,8 +12,7 @@ import {
 // import { createUser } from "../../utils/rest";
 
 export const LoginForm = () => {
-  const [lastName, setLastName] = useState(null);
-  const [firstName, setFirstName] = useState(null);
+  const [password, setPassword] = useState(null);
   const [email, setEmail] = useState(null);
 
   //   function addUser(newUser) {
@@ -27,28 +26,15 @@ export const LoginForm = () => {
   //   }
 
   const login = () => {
-    console.log("make aPI call");
+    console.log("make API call");
+    console.log({ userObject });
   };
 
-  const userObject = { firstname: firstName, lastname: lastName, email: email };
+  const userObject = { email, password };
 
   return (
     <FormContainer>
       <StyledForm className="StyledForm">
-        <InputDiv>
-          <Text>Nom : </Text>
-          <Input
-            type="text"
-            onChange={(event) => setLastName(event.target.value)}
-          />
-        </InputDiv>
-        <InputDiv>
-          <Text> Prénom :</Text>
-          <Input
-            type="text"
-            onChange={(event) => setFirstName(event.target.value)}
-          />
-        </InputDiv>
         <InputDiv>
           <Text>Email :</Text>
           <Input
@@ -56,6 +42,15 @@ export const LoginForm = () => {
             onChange={(event) => setEmail(event.target.value)}
           />
         </InputDiv>
+
+        <InputDiv>
+          <Text>Password :</Text>
+          <Input
+            type="text"
+            onChange={(event) => setPassword(event.target.value)}
+          />
+        </InputDiv>
+
         <Button
           type="button"
           value="Envoyer"
