@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Navbar, AnchorContainer, AnchorText } from "./Header.styles";
 
 export const anchorData = [
-  { title: "HOME", link: "#homeAnchor" },
-  { title: "PROMO", link: "#promoAnchor" },
-  { title: "CONDITIONS", link: "#conditionsAnchor" },
+  { title: "HOME", link: "/home" },
+  { title: "PROMO", link: "/promo" },
+  { title: "LOGIN", link: "/login" },
 ];
 
 export const Header = () => {
