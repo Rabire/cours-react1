@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navbar, AnchorContainer, AnchorText } from "./Header.styles";
 
 export const anchorData = [
-  { title: "HOME", link: "/home" },
+  { title: "HOME", link: "/" },
   { title: "PROMO", link: "/promo" },
   { title: "LOGIN", link: "/login" },
 ];
