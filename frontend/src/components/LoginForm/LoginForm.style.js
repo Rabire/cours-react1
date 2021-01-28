@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { color } from "./../../theme";
 
 export const FormContainer = styled.div`
   display: flex;

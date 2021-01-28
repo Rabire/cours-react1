@@ -15,5 +15,5 @@ app.use(cors("http://localhost:" + port));
 require("./routes/users-route.js")(app);
 
 app.listen(port, () =>
-    console.log(`Example listening at http://localhost:${port}`)
+  console.log(`Example listening at http://localhost:${port}`)
 );

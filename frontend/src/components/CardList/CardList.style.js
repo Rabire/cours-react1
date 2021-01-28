@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { color } from "./../../theme";
 
 export const CardListContainer = styled.div`
   display: flex;

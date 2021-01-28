@@ -110,6 +110,7 @@ exports.updateUser = (req, res) => {
 
 exports.login = async (req, res) => {
   const bodyReceived = req.body;
+
   Users.findOne({
     where: {
       email: bodyReceived.email,
@@ -123,12 +124,12 @@ exports.login = async (req, res) => {
           result.dataValues.password
         );
         if (passwordIsCorrect) {
-          res.status(200).send({ userId: result.dataValues.id });
+          return res.status(200).send({ userId: result.dataValues.id });
         }
       }
-      res.status(401).send("unknown email or password");
+      return res.status(401).send("unknown email or password");
     })
     .catch(() => {
-      res.sendStatus(500);
+      return res.sendStatus(500);
     });
 };
