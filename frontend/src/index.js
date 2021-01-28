@@ -4,7 +4,7 @@ import "./index.css";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
-import { Header, Home } from "./components";
+import { Header, Home, LoginForm } from "./components";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
@@ -12,7 +12,7 @@ ReactDOM.render(
     <Header />
     <BrowserRouter>
       <Route exact path="/" component={Home} />
-      {/* <Route path="/login" component={Form} /> */}
+      <Route path="/login" component={LoginForm} />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

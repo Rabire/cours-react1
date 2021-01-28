@@ -5,3 +5,4 @@ export * from "./Offers/Offers";
 export * from "./CardList/CardList";
 
 export * from "./Home/Home";
+export * from "./LoginForm/LoginForm";
