@@ -34,7 +34,7 @@ export const Header = () => {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/login">
-          Navbar
+          D-Thunes
         </a>
         <button
           class="navbar-toggler"
