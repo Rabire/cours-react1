@@ -31,7 +31,10 @@ export const Header = () => {
   ));
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      style={{ marginBottom: 15 }}
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="/login">
           D-Thunes

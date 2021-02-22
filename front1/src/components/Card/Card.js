@@ -1,22 +1,14 @@
-export const Card = () => {
+export const Card = ({ offer }) => {
   return (
     <div class="card mb-3" style={{ maxWidth: 540 }}>
       <div class="row g-0">
         <div class="col-md-4" className="img-box">
-          <img
-            className="img-fluid"
-            src="https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
-            alt="..."
-          />
+          <img className="img-fluid" src={offer.imageUrl} alt="..." />
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
+            <h5 class="card-title">{offer.name}</h5>
+            <p class="card-text">{offer.description}</p>
             <p class="card-text">
               <small class="text-muted">Last updated 3 mins ago</small>
             </p>
