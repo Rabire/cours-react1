@@ -1,9 +1,17 @@
-// import "./Login.css";
+import { Card } from "../../components";
 
 export const Offers = () => {
   return (
-    <div className="Offers">
-      <h1>Offers</h1>
+    <div class="page">
+      <div class="row card-grid-row">
+        <Card />
+        <Card />
+      </div>
+
+      <div class="row card-grid-row">
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 };
