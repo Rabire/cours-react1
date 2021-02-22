@@ -3,7 +3,7 @@
 export const Header = () => {
   const pages = [
     { title: "Accueil", link: "/" },
-    { title: "Promotions", link: "/promo" },
+    { title: "Promotions", link: "/offers" },
     { title: "Actus", link: "/news" },
   ];
 
@@ -16,7 +16,7 @@ export const Header = () => {
 
   const navItems = pages.map((page) => (
     <li class="nav-item">
-      <a class="nav-link" href={`/${page.link}`}>
+      <a class="nav-link" href={page.link}>
         {page.title}
       </a>
     </li>
