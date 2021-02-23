@@ -1,6 +1,16 @@
+import { useState, useCallback } from "react";
 import "./Login.css";
 
 export const Login = () => {
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+
+  console.log({ email, password });
+
+  const sendCredentials = useCallback(() => {
+    console.log("sendCredentials callback");
+  }, []);
+
   return (
     <form className="form-box">
       <div class="mb-3">
@@ -12,6 +22,7 @@ export const Login = () => {
           class="form-control"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
+          onChange={(event) => setEmail(event.target.value)}
         />
       </div>
       <div class="mb-3">
@@ -22,6 +33,7 @@ export const Login = () => {
           type="password"
           class="form-control"
           id="exampleInputPassword1"
+          onChange={(event) => setPassword(event.target.value)}
         />
       </div>
       <div class="mb-3 form-check">
@@ -30,7 +42,7 @@ export const Login = () => {
           Se rappeler de moi
         </label>
       </div>
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary" onPress={sendCredentials}>
         Connexion
       </button>
     </form>
