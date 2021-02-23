@@ -32,5 +32,9 @@ export const Slider = () => {
     </>
   ));
 
-  return <Carousel className="carousel">{sliderItem}</Carousel>;
+  return (
+    <div className="carousel-box">
+      <Carousel className="carousel">{sliderItem}</Carousel>
+    </div>
+  );
 };
