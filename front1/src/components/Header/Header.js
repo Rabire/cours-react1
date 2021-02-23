@@ -51,7 +51,7 @@ export const Header = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav" style={{ width: "100%" }}>
             {navItems}
 
             <li class="nav-item dropdown">
@@ -73,7 +73,13 @@ export const Header = () => {
               </ul>
             </li>
 
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              style={{
+                position: "absolute",
+                right: 15,
+              }}
+            >
               <a class="nav-link" href="/login">
                 Se connecter
               </a>
