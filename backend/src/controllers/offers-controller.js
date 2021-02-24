@@ -14,6 +14,14 @@ offerIdExists = async (offerId) =>
     }));
 
 exports.findAllActive = (req, res) => {
+     // -- Token verification --
+     let user;
+     try {
+         user = await tryGetUserFromToken(req, res);
+     } catch {
+         return res.status(401).send("invalid token");
+     }
+
     Offers.findAll()
         .then((results) => res.send(results).status(200))
         .catch(() => {
@@ -22,6 +30,14 @@ exports.findAllActive = (req, res) => {
 };
 
 exports.findById = (req, res) => {
+     // -- Token verification --
+     let user;
+     try {
+         user = await tryGetUserFromToken(req, res);
+     } catch {
+         return res.status(401).send("invalid token");
+     }
+
     const urlId = req.params.id;
 
     Offers.findOne({
@@ -40,6 +56,13 @@ exports.findById = (req, res) => {
 };
 
 exports.deleteById = (req, res) => {
+     // -- Token verification --
+     let user;
+     try {
+         user = await tryGetUserFromToken(req, res);
+     } catch {
+         return res.status(401).send("invalid token");
+     }
     const urlId = req.params.id;
 
     Offers.findById(urlId).then(async (offerFound) => {
@@ -57,6 +80,13 @@ exports.deleteById = (req, res) => {
 };
 
 exports.addOffer = async (req, res) => {
+     // -- Token verification --
+     let user;
+     try {
+         user = await tryGetUserFromToken(req, res);
+     } catch {
+         return res.status(401).send("invalid token");
+     }
     const bodyReceived = req.body;
     const missingRequiredField = checkOfferFields.isPostBodyMissingField(
         bodyReceived
@@ -75,6 +105,13 @@ exports.addOffer = async (req, res) => {
 };
 
 exports.updateOffer = (req, res) => {
+     // -- Token verification --
+     let user;
+     try {
+         user = await tryGetUserFromToken(req, res);
+     } catch {
+         return res.status(401).send("invalid token");
+     }
     const bodyReceived = req.body;
     const urlId = req.params.id;
 
