@@ -1,0 +1,13 @@
+.img-box {
+  align-items: center;
+}
+
+.card-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.description {
+  height: 100px;
+  overflow: hidden;
+}
